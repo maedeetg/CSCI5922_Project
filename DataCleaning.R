@@ -1,22 +1,12 @@
-### 
-
-Load in libraries
-
-```{r}
+# Load in libraries
 library(dplyr)
-```
 
-Read in data
-
-```{r}
+# Read in data
 songs <- read.csv("TheBeatlesSongs.csv") 
 songs_john_paul <- songs %>% filter(vocals == "John" | vocals == "Paul")
 songs_john_paul <- songs_john_paul %>% mutate(across(c(liveness, valence), as.numeric))
-```
 
-Lyric data
-
-```{r}
+# Lyric data
 # Read the content of the file
 lyrics <- readLines("BeatlesLyrics")
 
@@ -50,4 +40,3 @@ write.csv(song_df, file = output_file, row.names = FALSE)
 
 # Confirm the file has been saved
 cat("Data frame successfully exported to", output_file, "\n")
-```
