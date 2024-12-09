@@ -96,7 +96,7 @@ id,year,album,song,danceability,energy,mode,speechiness,acousticness,liveness,va
 95,1966,Revolver,I want to tell you,0.493,0.525,1,0.0315,0.182,0.148,0.449,147973,George
 96,1966,Revolver,got to get you into my life,0.521,0.524,1,0.0302,0.42,0.0838,0.711,149240,Paul
 97,1966,Revolver,tomorrow never knows,0.38,0.829,1,0.0405,0.000084,0.342,0.0534,179547,John
-98,1967,Sgt. Pepper's Lonely Hearts Club Band,sgt.peppers lonely hearts club band,0.451,0.673,1,0.0734,0.0857,: 0.797,: 0.583,122893,Paul
+98,1967,Sgt. Pepper's Lonely Hearts Club Band,sgt.peppers lonely hearts club band,0.451,0.673,1,0.0734,0.0857,0.797,0.583,122893,Paul
 99,1967,Sgt. Pepper's Lonely Hearts Club Band,with a little help from my friends,0.705,0.515,1,0.0337,0.365,0.389,0.803,164107,Ringo
 100,1967,Sgt. Pepper's Lonely Hearts Club Band,lucy in the sky with diamonds,0.311,0.325,1,0.0283,0.0469,0.139,0.668,208467,John
 101,1967,Sgt. Pepper's Lonely Hearts Club Band,getting better,0.632,0.471,1,0.0348,0.313,0.0712,0.764,168120,Paul

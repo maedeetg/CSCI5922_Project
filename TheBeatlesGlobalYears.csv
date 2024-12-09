@@ -1,0 +1,69 @@
+﻿id,year,album,song,danceability,energy,speechiness,acousticness,liveness,valence,duration_ms
+84,1966,Revolver,taxman,0.469,0.596,0.0749,0.0101,0.321,0.783,158853
+85,1966,Revolver,eleanor rigby,0.581,0.28,0.0381,0.936,0.305,0.813,126533
+86,1966,Revolver,im only sleeping,0.494,0.47,0.0301,0.21,0.28,0.698,180320
+87,1966,Revolver,love you to,0.391,0.593,0.0413,0.7,0.0829,0.707,179827
+88,1966,Revolver,"here, there and everywhere",0.29,0.247,0.0383,0.921,0.0917,0.36,144880
+89,1966,Revolver,yellow submarine,0.604,0.549,0.0389,0.531,0.438,0.696,158880
+90,1966,Revolver,she said she said ,0.329,0.678,0.0344,0.103,0.843,0.672,156040
+91,1966,Revolver,good day sunshine,0.77,0.496,0.0468,0.719,0.123,0.571,129293
+92,1966,Revolver,and your bird can sing,0.555,0.65,0.0282,0.0067,0.236,0.966,120493
+93,1966,Revolver,for no one,0.483,0.351,0.0278,0.783,0.115,0.713,119813
+94,1966,Revolver,doctor robert,0.394,0.64,0.0488,0.164,0.153,0.574,134267
+95,1966,Revolver,I want to tell you,0.493,0.525,0.0315,0.182,0.148,0.449,147973
+96,1966,Revolver,got to get you into my life,0.521,0.524,0.0302,0.42,0.0838,0.711,149240
+97,1966,Revolver,tomorrow never knows,0.38,0.829,0.0405,0.000084,0.342,0.0534,179547
+98,1967,Sgt. Pepper's Lonely Hearts Club Band,sgt.peppers lonely hearts club band,0.451,0.673,0.0734,0.0857,0.797,0.583,122893
+99,1967,Sgt. Pepper's Lonely Hearts Club Band,with a little help from my friends,0.705,0.515,0.0337,0.365,0.389,0.803,164107
+100,1967,Sgt. Pepper's Lonely Hearts Club Band,lucy in the sky with diamonds,0.311,0.325,0.0283,0.0469,0.139,0.668,208467
+101,1967,Sgt. Pepper's Lonely Hearts Club Band,getting better,0.632,0.471,0.0348,0.313,0.0712,0.764,168120
+102,1967,Sgt. Pepper's Lonely Hearts Club Band,fixing a hole,0.469,0.507,0.0451,0.382,0.0783,0.619,156827
+103,1967,Sgt. Pepper's Lonely Hearts Club Band,shes leaving home,0.381,0.214,0.0337,0.944,0.106,0.393,215160
+104,1967,Sgt. Pepper's Lonely Hearts Club Band,being for the benefit of mr.kite!,0.526,0.413,0.0446,0.338,0.0992,0.71,157533
+105,1967,Sgt. Pepper's Lonely Hearts Club Band,within you without you,0.352,0.479,0.0338,0.339,0.486,0.354,304667
+106,1967,Sgt. Pepper's Lonely Hearts Club Band,when im sixty four,0.704,0.241,0.0476,0.625,0.0868,0.661,157667
+107,1967,Sgt. Pepper's Lonely Hearts Club Band,lovely rita,0.61,0.471,0.0261,0.0634,0.118,0.63,162093
+108,1967,Sgt. Pepper's Lonely Hearts Club Band,good morning good mornng,0.542,0.618,0.139,0.0858,0.772,0.93,161227
+109,1967,Sgt. Pepper's Lonely Hearts Club Band,sgt. Peppers lonely hearts club band,0.653,0.889,0.0453,0.0061,0.892,0.879,79067
+110,1967,Sgt. Pepper's Lonely Hearts Club Band,a day in the life,0.364,0.457,0.0675,0.29,0.922,0.175,337413
+111,1967,Magical Mystery Tour,magical mystery tour,0.297,).613,0.0931,0.0385,0.0734,0.338,170107
+112,1967,Magical Mystery Tour,the fool on the hill,0.365,0.26,0.0314,0.913,0.105,0.49,179107
+113,1967,Magical Mystery Tour,flying ,0.551,0.395,0.0501,0.368,0.0932,0.261,135520
+114,1967,Magical Mystery Tour,blue jay way,0.294,0.407,0.0308,0.0258,0.0852,0.0378,235067
+115,1967,Magical Mystery Tour,your mother should know,0.698,0.293,0.0332,0.784,0.0936,0.724,148413
+116,1967,Magical Mystery Tour,I am the walrus,0.401,0.556,0.0513,0.0828,0.589,0.654,275867
+117,1967,Magical Mystery Tour,"hello, goodbye",0.479,0.733,0.0256,0.306,0.414,0.806,208840
+118,1967,Magical Mystery Tour,strawberry field forever,0.39,0.502,0.178,0.336,0.0713,0.289,247320
+119,1967,Magical Mystery Tour,penny lane,0.651,0.488,0.0316,0.212,0.136,0.49,180893
+120,1967,Magical Mystery Tour,"baby, youre a rich man",0.619,0.625,0.036,0.0119,0.152,0.467,181307
+121,1967,Magical Mystery Tour,all you need is love,0.4,0.48,0.0295,0.346,0.155,0.653,230387
+122,1968,The Beatles (white album),back in the ussr,0.48,0.969,0.0854,0.069,0.0608,0.494,163453
+123,1968,The Beatles (white album),dear prudence ,0.388,0.529,0.0436,0.16,0.108,0.332,235773
+124,1968,The Beatles (white album),glass onion,0.523,0.51,0.0514,0.0123,0.108,0.789,137840
+125,1968,The Beatles (white album),"obi-la -di, ob-la-da",0.818,0.728,0.0314,0.232,0.251,0.975,188960
+126,1968,The Beatles (white album),wild honey pie,0.792,0.763,0.0506,0.425,0.789,0.152,52973
+127,1968,The Beatles (white album),the continue story of bungalow bill,0.621,0.459,0.104,0.224,0.656,0.648,194160
+128,1968,The Beatles (white album),while my guitar gently weeps,0.453,0.654,0.0317,0.0205,0.172,0.702,285000
+129,1968,The Beatles (white album),happiness is a warm gem,0.431,0.54,0.0589,0.523,0.169,0.44,164547
+130,1968,The Beatles (white album),martha my dear,0.472,0.292,0.0321,0.872,0.128,0.824,148573
+131,1968,The Beatles (white album),im so tired,0.433,0.483,0.175,0.656,0.539,0.717,123493
+132,1968,The Beatles (white album),blackbird,0.686,0.127,0.0342,0.754,0.0573,0.372,138387
+133,1968,The Beatles (white album),piggies,0.542,0.445,0.0303,0.643,0.516,0.52,124267
+134,1968,The Beatles (white album),rocky raccoon,0.599,0.363,0.0315,0.333,0.243,0.648,213107
+135,1968,The Beatles (white album),don’t pass me by,0.599,0.537,0.0254,0.594,0.194,0.946,230453
+136,1968,The Beatles (white album),why don’t we do it in the road?,0.589,0.522,0.0521,0.53,0.0993,0.957,101160
+137,1968,The Beatles (white album),I will,0.631,0.387,0.0262,0.742,0.0822,0.832,105933
+138,1968,The Beatles (white album),julia,0.512,0.0953,0.0304,0.828,0.117,0.193,176667
+139,1968,The Beatles (white album),birthday,0.541,0.727,0.0384,0.0000737,0.232,0.91,163080
+140,1968,The Beatles (white album),yer blue,0.327,0.525,0.0475,0.000875,0.133,0.435,240453
+141,1968,The Beatles (white album),mother natures son,0.608,0.178,0.0264,0.634,0.166,0.401,168027
+142,1968,The Beatles (white album),everybodys got something to hide even you,0.523,0.731,0.0559,0.0207,0.081,0.81,144773
+143,1968,The Beatles (white album),sexy sadie ,0.577,0.624,0.0285,0.33,0.117,0.671,195267
+144,1968,The Beatles (white album),helter skelter,0.166,0.831,0.0894,0.000606,0.811,0.281,269787
+145,1968,The Beatles (white album),"long, long. Long",0.349,0.129,0.0294,0.539,0.192,0.163,186307
+146,1968,The Beatles (white album),revolution 1,0.386,0.626,0.0377,0.0785,0.621,0.695,255707
+147,1968,The Beatles (white album),honey pie,0.537,0.297,0.0822,0.88,0.145,0.553,161160
+148,1968,The Beatles (white album),savoy truffle,0.623,0.544,0.0536,0.00814,0.134,0.793,174467
+149,1968,The Beatles (white album),cry baby cry,0.517,0.529,0.0323,0.115,0.174,0.362,182080
+150,1968,The Beatles (white album),revolution 9,0.208,0.615,0.342,0.769,0.824,0.101,502013
+151,1968,The Beatles (white album),good night,0.146,0.355,0.0352,0.865,0.114,0.178,193760
