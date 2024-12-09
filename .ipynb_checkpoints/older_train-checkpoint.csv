@@ -1,0 +1,49 @@
+"id","year","album","song","danceability","energy","mode","speechiness","acousticness","liveness","valence","duration_ms","vocals"
+125,1968,"The Beatles (white album)","obi-la -di, ob-la-da",0.818,0.728,1,0.0314,0.232,0.251,0.975,188960,1
+108,1967,"Sgt. Pepper's Lonely Hearts Club Band","good morning good mornng",0.542,0.618,1,0.139,0.0858,0.772,0.93,161227,0
+168,1969,"Abbey Road","Oh! Darling",0.422,0.656,1,0.0397,0.0126,0.268,0.549,207240,1
+186,1970,"Let It Be","dig it ",0.54,0.489,1,0.117,0.659,0.457,0.67,50467,0
+140,1968,"The Beatles (white album)","yer blues",0.327,0.525,1,0.0475,0.000875,0.133,0.435,240453,0
+141,1968,"The Beatles (white album)","mother natures son",0.608,0.178,1,0.0264,0.634,0.166,0.401,168027,1
+115,1967,"Magical Mystery Tour","your mother should know",0.698,0.293,1,0.0332,0.784,0.0936,0.724,148413,1
+173,1969,"Abbey Road","you never give me your money",0.335,0.416,1,0.0348,0.345,0.116,0.223,242973,1
+142,1968,"The Beatles (white album)","everybodys got something to hide even you",0.523,0.731,1,0.0559,0.0207,0.081,0.81,144773,0
+143,1968,"The Beatles (white album)","sexy sadie ",0.577,0.624,1,0.0285,0.33,0.117,0.671,195267,0
+118,1967,"Magical Mystery Tour","strawberry field forever",0.39,0.502,1,0.178,0.336,0.0713,0.289,247320,0
+183,1970,"Let It Be","dig a pony",0.538,0.478,0,0.0388,0.472,0.17,0.527,235000,0
+157,1969,"Yellow Submarine","all you need is love",0.4,0.463,1,0.0288,0.345,0.286,0.627,231213,0
+130,1968,"The Beatles (white album)","martha my dear",0.472,0.292,1,0.0321,0.872,0.128,0.824,148573,1
+124,1968,"The Beatles (white album)","glass onion",0.523,0.51,0,0.0514,0.0123,0.108,0.789,137840,0
+127,1968,"The Beatles (white album)","the continue story of bungalow bill",0.621,0.459,1,0.104,0.224,0.656,0.648,194160,0
+180,1969,"Abbey Road","the end ",0.647,0.487,0,0.0689,0.00101,0.138,0.222,141613,1
+122,1968,"The Beatles (white album)","back in the ussr",0.48,0.969,1,0.0854,0.069,0.0608,0.494,163453,1
+144,1968,"The Beatles (white album)","helter skelter",0.166,0.831,1,0.0894,0.000606,0.811,0.281,269787,1
+165,1969,"Abbey Road","come together",0.533,0.376,0,0.0393,0.0302,0.0926,0.187,259947,0
+120,1967,"Magical Mystery Tour","baby, youre a rich man",0.619,0.625,1,0.036,0.0119,0.152,0.467,181307,0
+98,1967,"Sgt. Pepper's Lonely Hearts Club Band","sgt.peppers lonely hearts club band",0.451,0.673,1,0.0734,0.0857,0.797,0.583,122893,1
+178,1969,"Abbey Road","golden slumbers",0.419,0.152,1,0.0277,0.326,0.113,0.239,91760,1
+134,1968,"The Beatles (white album)","rocky raccoon",0.599,0.363,1,0.0315,0.333,0.243,0.648,213107,1
+138,1968,"The Beatles (white album)","julia",0.512,0.0953,1,0.0304,0.828,0.117,0.193,176667,0
+170,1969,"Abbey Road","I want you(she's so heavy)",0.37,0.515,0,0.0321,0.0233,0.0966,0.42,467320,0
+102,1967,"Sgt. Pepper's Lonely Hearts Club Band","fixing a hole",0.469,0.507,0,0.0451,0.382,0.0783,0.619,156827,1
+176,1969,"Abbey Road","polythene pam",0.474,0.939,0,0.199,0.00472,0.19,0.499,72640,0
+147,1968,"The Beatles (white album)","honey pie",0.537,0.297,1,0.0822,0.88,0.145,0.553,161160,1
+132,1968,"The Beatles (white album)","blackbird",0.686,0.127,1,0.0342,0.754,0.0573,0.372,138387,1
+137,1968,"The Beatles (white album)","I will",0.631,0.387,1,0.0262,0.742,0.0822,0.832,105933,1
+146,1968,"The Beatles (white album)","revolution 1",0.386,0.626,1,0.0377,0.0785,0.621,0.695,255707,0
+123,1968,"The Beatles (white album)","dear prudence ",0.388,0.529,1,0.0436,0.16,0.108,0.332,235773,0
+193,1970,"Let It Be","get back",0.761,0.592,1,0.0586,0.492,0.61,0.332,189387,1
+136,1968,"The Beatles (white album)","why don't we do it in the road?",0.589,0.522,1,0.0521,0.53,0.0993,0.957,101160,1
+167,1969,"Abbey Road","maxwells silver hammer",0.764,0.426,1,0.0405,0.629,0.132,0.726,207920,1
+117,1967,"Magical Mystery Tour","hello, goodbye",0.479,0.733,1,0.0256,0.306,0.414,0.806,208840,1
+112,1967,"Magical Mystery Tour","the fool on the hill",0.365,0.26,0,0.0314,0.913,0.105,0.49,179107,1
+184,1970,"Let It Be","across the universe",0.257,0.412,1,0.0287,0.361,0.0702,0.858,228133,0
+187,1970,"Let It Be","let it be ",0.443,0.403,1,0.0322,0.631,0.111,0.41,243027,1
+155,1969,"Yellow Submarine","hey bulldog",0.587,0.617,1,0.028,0.0197,0.199,0.947,191307,0
+131,1968,"The Beatles (white album)","im so tired",0.433,0.483,1,0.175,0.656,0.539,0.717,123493,0
+191,1970,"Let It Be","the long and winding road",0.299,0.329,1,0.0279,0.756,0.0559,0.392,218187,1
+107,1967,"Sgt. Pepper's Lonely Hearts Club Band","lovely rita",0.61,0.471,0,0.0261,0.0634,0.118,0.63,162093,1
+177,1969,"Abbey Road","she came in through the bathroom window",0.53,0.72,1,0.0338,0.00376,0.314,0.69,118627,1
+175,1969,"Abbey Road","mean mr mustard",0.676,0.596,1,0.0272,0.0699,0.351,0.97,66533,0
+121,1967,"Magical Mystery Tour","all you need is love",0.4,0.48,1,0.0295,0.346,0.155,0.653,230387,0
+116,1967,"Magical Mystery Tour","I am the walrus",0.401,0.556,1,0.0513,0.0828,0.589,0.654,275867,0
