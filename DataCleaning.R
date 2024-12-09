@@ -3,40 +3,37 @@ library(dplyr)
 
 # Read in data
 songs <- read.csv("TheBeatlesSongs.csv") 
+songs <- songs %>% select(-mode)
 songs_john_paul <- songs %>% filter(vocals == "John" | vocals == "Paul")
 songs_john_paul <- songs_john_paul %>% mutate(across(c(liveness, valence), as.numeric))
 
-# Lyric data
-# Read the content of the file
-lyrics <- readLines("BeatlesLyrics")
+# Make labels numeric, Paul = 1, John = 0
+songs_0_1 <- songs_john_paul_norm %>% mutate(vocals = ifelse(songs_john_paul$vocals == "Paul", 1, 0))
 
-# Split the content into sections based on the delimiter "-----"
-sections <- split(lyrics, cumsum(lyrics == "-----"))
-names(sections) <- NULL  # Remove names for simplicity
+# Normalize data
+songs_john_paul_norm <- songs_john_paul %>% mutate(danceability = (danceability - mean(danceability))/sd(danceability),
+                                                   energy = (energy - mean(energy))/sd(energy),
+                                                   speechiness = (speechiness - mean(speechiness))/sd(speechiness),
+                                                   acousticness = (acousticness - mean(acousticness))/sd(acousticness),
+                                                   liveness = (liveness - mean(liveness))/sd(liveness),
+                                                   valence = (valence - mean(valence))/sd(valence),
+                                                   duration_ms = (duration_ms - mean(duration_ms))/sd(duration_ms))
 
-# Remove empty sections and clean up delimiters
-sections <- lapply(sections, function(section) section[section != "-----"])
+# Training and testing data for entire dataset
+set.seed(123)
+train <- songs_0_1 %>% sample_n(floor(nrow(songs_0_1)*0.8), replace = FALSE)
+test <- anti_join(songs_0_1, train, by = colnames(subset))
 
-# Filter out invalid sections (those without content)
-sections <- sections[sapply(sections, function(x) length(x) > 1)]
+# Make early years and older years
+early_years_train <- train %>% filter(year <= 1966)
+early_years_test <- test %>% filter(year <= 1966)
+older_years_train <- train %>% filter(year > 1966)
+older_years_test <- test %>% filter(year > 1966)
 
-# Extract song titles and lyrics
-song_data <- lapply(sections, function(section) {
-  title <- section[1]  # First line is the title
-  lyric <- paste(section[-1], collapse = "\n")  # Combine remaining lines as lyrics
-  lyric <- gsub("\\n", " ", lyric)  # Remove any literal newline characters
-  lyric <- gsub('"', " ", lyric)  # Remove any literal newline characters
-  data.frame(Title = title, Lyrics = lyric, stringsAsFactors = FALSE)
-})
-
-# Combine all into a single data frame
-lyrics_df <- do.call(rbind, song_data)
-
-# Specify the output file path
-output_file <- "song_lyrics.csv"
-
-# Write the data frame to a CSV file
-write.csv(song_df, file = output_file, row.names = FALSE)
-
-# Confirm the file has been saved
-cat("Data frame successfully exported to", output_file, "\n")
+# Export as csv to be used in python
+write.csv(train, "train.csv", row.names = TRUE)
+write.csv(test, "train.csv", row.names = TRUE)
+write.csv(early_years_train, "train.csv", row.names = TRUE)
+write.csv(early_years_test, "train.csv", row.names = TRUE)
+write.csv(older_years_train, "train.csv", row.names = TRUE)
+write.csv(older_years_test, "train.csv", row.names = TRUE)
