@@ -11,7 +11,7 @@ songs_john_paul <- songs_john_paul %>% mutate(across(c(liveness, valence), as.nu
 songs_0_1 <- songs_john_paul %>% mutate(vocals = ifelse(songs_john_paul$vocals == "Paul", 1, 0))
 
 # Normalize data
-songs_john_paul_norm <- songs_john_paul %>% mutate(duration_ms = (duration_ms - min(duration_ms))/(max(duration_ms) - min(duration_ms)))
+songs_john_paul_norm <- songs_0_1 %>% mutate(duration_ms = (duration_ms - min(duration_ms))/(max(duration_ms) - min(duration_ms)))
 
 # Training and testing data for entire dataset
 set.seed(123)
