@@ -16,7 +16,7 @@ id,year,album,song,danceability,energy,mode,speechiness,acousticness,liveness,va
 15,1963,With The Beatles,It Wont Be Long,0.472,0.673,1,0.0318,0.284,0.206,0.862,133387,John
 16,1963,With The Beatles,All I've Got To Do,0.49,0.579,0,0.0344,0.217,0.0644,0.879,122573,John
 17,1963,With The Beatles,All My Loving,0.416,0.563,0,0.0298,0.207,0.343,0.9,127853,Paul
-18,1963,With The Beatles,Don't Bother Me,0.371,0.724,1,0.0562,0.554,0.299,0.916,148253,George
+18,1963,With The Beatles,Don’t Bother Me,0.371,0.724,1,0.0562,0.554,0.299,0.916,148253,George
 19,1963,With The Beatles,Little Child,0.526,0.858,1,0.0476,0.292,0.353,0.886,106400,"John, Paul"
 20,1963,With The Beatles,Till There Was You,0.727,0.338,1,0.0454,0.79,0.105,0.646,133507,Paul
 21,1963,With The Beatles,Please Mister Postman,0.552,0.644,1,0.0372,0.675,0.36,0.961,154160,John
@@ -26,7 +26,7 @@ id,year,album,song,danceability,energy,mode,speechiness,acousticness,liveness,va
 25,1963,With The Beatles,I Wanna Be Your Man,0.553,0.914,1,0.0415,0.477,0.292,0.683,119507,Ringo
 26,1963,With The Beatles,Devil In Her Heart,0.618,0.622,1,0.0296,0.227,0.0438,0.966,146213,George
 27,1963,With The Beatles,Not A Second Time,0.471,0.817,1,0.0372,0.213,0.498,0.961,126827,John
-28,1963,With The Beatles,Money(That's What I Want),0.545,0.853,0,0.0394,0.425,0.266,0.923,169507,John
+28,1963,With The Beatles,Money(That’s What I Want),0.545,0.853,0,0.0394,0.425,0.266,0.923,169507,John
 29,1964,A Hard Day's Night,A Hard Day's Night,0.59,0.805,1,0.0371,0.137,0.0996,0.797,154200,"John, Paul"
 30,1964,A Hard Day's Night,I should Have Known Better,0.682,0.444,1,0.0289,0.257,0.115,0.91,163080,John
 31,1964,A Hard Day's Night,If I Fell,0.665,0.31,1,0.0278,0.68,0.0877,0.568,139467,"John, Paul"
@@ -49,14 +49,14 @@ id,year,album,song,danceability,energy,mode,speechiness,acousticness,liveness,va
 48,1964,Beatles for Sale,kansas city/ Hey-Hey-Hey-Hey,0.588,0.724,1,0.0335,0.614,0.877,0.924,158147,Paul
 49,1964,Beatles for Sale,eight days a week,0.652,0.583,1,0.038,0.412,0.119,0.744,163600,"John, Paul"
 50,1964,Beatles for Sale,words of love,0.551,0.533,1,0.0297,0.323,0.173,0.85,124320,"John, Paul"
-51,1964,Beatles for Sale,honey don't ,0.629,0.545,1,0.0348,0.473,0.0854,0.735,177427,Ringo
+51,1964,Beatles for Sale,honey don’t ,0.629,0.545,1,0.0348,0.473,0.0854,0.735,177427,Ringo
 52,1964,Beatles for Sale,every little thing,0.74,0.49,1,0.038,0.488,0.103,0.678,123800,"John, Paul"
-53,1964,Beatles for Sale,I don't want to spoil the party ,0.533,0.668,1,0.033,0.451,0.149,0.889,154467,"John, Paul"
+53,1964,Beatles for Sale,I don’t want to spoil the party ,0.533,0.668,1,0.033,0.451,0.149,0.889,154467,"John, Paul"
 54,1964,Beatles for Sale,What youre doing,0.695,0.53,1,0.0403,0.301,0.0583,0.825,150040,Paul
 55,1964,Beatles for Sale,everybodys trying to be my baby,0.543,0.806,1,0.0385,0.466,0.134,0.943,146000,George
 56,1965,Help!,Help!,0.534,0.725,0,0.0332,0.188,0.0994,0.763,139560,John
 57,1965,Help!,the night before,0.461,0.762,1,0.0379,0.0537,0.238,0.632,154933,Paul
-58,1965,Help!,you've got to hide your love away,0.398,0.392,1,0.0282,0.207,0.102,0.378,129120,John
+58,1965,Help!,you’ve got to hide your love away,0.398,0.392,1,0.0282,0.207,0.102,0.378,129120,John
 59,1965,Help!,I need you,0.601,0.489,1,0.0455,0.277,0.0988,0.638,148787,George
 60,1965,Help!,another girl,0.516,0.638,1,0.0314,0.238,0.333,0.822,125360,Paul
 61,1965,Help!,youre going to lose that girl,0.533,0.66,1,0.0337,0.346,0.26,0.818,138667,John
@@ -133,8 +133,8 @@ id,year,album,song,danceability,energy,mode,speechiness,acousticness,liveness,va
 132,1968,The Beatles (white album),blackbird,0.686,0.127,1,0.0342,0.754,0.0573,0.372,138387,Paul
 133,1968,The Beatles (white album),piggies,0.542,0.445,1,0.0303,0.643,0.516,0.52,124267,George
 134,1968,The Beatles (white album),rocky raccoon,0.599,0.363,1,0.0315,0.333,0.243,0.648,213107,Paul
-135,1968,The Beatles (white album),don't pass me by,0.599,0.537,1,0.0254,0.594,0.194,0.946,230453,Ringo
-136,1968,The Beatles (white album),why don't we do it in the road?,0.589,0.522,1,0.0521,0.53,0.0993,0.957,101160,Paul
+135,1968,The Beatles (white album),don’t pass me by,0.599,0.537,1,0.0254,0.594,0.194,0.946,230453,Ringo
+136,1968,The Beatles (white album),why don’t we do it in the road?,0.589,0.522,1,0.0521,0.53,0.0993,0.957,101160,Paul
 137,1968,The Beatles (white album),I will,0.631,0.387,1,0.0262,0.742,0.0822,0.832,105933,Paul
 138,1968,The Beatles (white album),julia,0.512,0.0953,1,0.0304,0.828,0.117,0.193,176667,John
 139,1968,The Beatles (white album),birthday,0.541,0.727,1,0.0384,0.0000737,0.232,0.91,163080,"John, Paul"
