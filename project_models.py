@@ -13,7 +13,7 @@ import tensorflow.keras
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout, LSTM
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam, SGD, AdamW, Adadelta
 from sklearn.model_selection import KFold
 import matplotlib.pyplot as plt
 from tensorflow.keras import layers
@@ -95,9 +95,9 @@ y_valid = np.array(y_valid_one_hot, dtype=np.float32)
 # ANN = keras.Sequential([tf.keras.layers.Flatten(input_shape=(54, )),
 #                         tf.keras.layers.Dense(100, activation='relu'),
 #                         tf.keras.layers.Dropout(0.5),
-#                         tf.keras.layers.Dense(50, activation='relu'),
+#                         tf.keras.layers.Dense(100, activation='relu'),
 #                         tf.keras.layers.Dropout(0.2),
-#                         tf.keras.layers.Dense(25, activation='relu'),
+#                         tf.keras.layers.Dense(50, activation='relu'),
 #                         tf.keras.layers.Dropout(0.2),
 #                         tf.keras.layers.Dense(6, activation='softmax')])
 
@@ -107,7 +107,7 @@ y_valid = np.array(y_valid_one_hot, dtype=np.float32)
 # # COMPILE MODEL
 # ANN.compile(loss="categorical_crossentropy",
 #             metrics=["accuracy"],
-#             optimizer='adam')
+#             optimizer=keras.optimizers.Adam(learning_rate=0.001))
 
 # # FIT THE MODEL TO TRAINING DATA
 # Fit = ANN.fit(x_train, y_train, epochs = 100, validation_data = (x_valid, y_valid))
@@ -150,34 +150,105 @@ y_valid = np.array(y_valid_one_hot, dtype=np.float32)
 # ax.yaxis.set_ticklabels(labels)
 # plt.show()
 #######################################################
-# Create sequential CNN. 
+# # Create sequential CNN. 
+# # Need to reshape the x_train and x_test to be used for a CNN. 
+# # I will reshape as (6, 3, 3) instead of the (54). I picked this since there are 6 sides to a rubiks
+# # cube and each side is 3 by 3
+# x_train_reshape = x_train.reshape(3542, 6, 3, 3)
+# x_test_reshape = x_test.reshape(393, 6, 3, 3)
+# x_valid_reshape = x_valid.reshape(393, 6, 3, 3)
+
+# # BUILD MODEL
+# CNN = keras.Sequential([
+#     tf.keras.layers.Conv2D(input_shape = (6, 3, 3), kernel_size = (3, 3), filters = 128, activation = 'relu', strides = (1, 1), padding = "same"), 
+#     tf.keras.layers.Dropout(0.5),
+#     tf.keras.layers.Conv2D(kernel_size = (3, 3), filters = 64, activation = 'relu', strides = (1, 1), padding = "same"),
+#     tf.keras.layers.Dropout(0.5),
+#     tf.keras.layers.Conv2D(kernel_size = (3, 3), filters = 32, activation = 'relu', strides = (1, 1), padding = "same"),
+#     tf.keras.layers.Dropout(0.5),
+#     tf.keras.layers.Flatten(),
+#     tf.keras.layers.Dense(6, activation = "softmax")])
+
+# # best so far had 0.5 0.5
+# CNN.summary()
+
+# # COMPILE MODEL
+# CNN.compile(loss="categorical_crossentropy",
+#             metrics=["accuracy"],
+#             optimizer=keras.optimizers.Adam(
+#     learning_rate=0.001))
+
+
+# # FIT THE MODEL TO TRAINING DATA
+# Fit = CNN.fit(x_train_reshape, y_train, epochs = 100, validation_data = (x_valid_reshape, y_valid))
+
+# # PLOT RESULTS
+# # Accuracy
+# plt.plot(Fit.history['accuracy'], label = 'training accuracy', color = 'magenta')
+# plt.plot(Fit.history['val_accuracy'], label = 'validation accuracy', color = 'purple')
+# plt.xlabel('Epoch')
+# plt.ylabel('Accuracy')
+# plt.title("Accuracy over Epochs")
+# plt.legend(loc='lower right')
+# plt.show()
+# # Loss
+# plt.plot(Fit.history['loss'], label = 'training loss', color = 'magenta')
+# plt.plot(Fit.history['val_loss'], label = 'validation loss', color = 'purple')
+# plt.xlabel('Epoch')
+# plt.ylabel('Loss')
+# plt.title("Loss over Epochs")
+# plt.legend(loc='lower right')
+# plt.show()
+
+# # TEST
+# Test_Loss, Test_Accuracy = CNN.evaluate(x_test_reshape, y_test)
+
+# # PREDICT & CONFUSION MATRIX
+# predictions = CNN.predict([x_test_reshape])
+# Max_Values = np.squeeze(np.array(predictions.argmax(axis=1))) # all our label predictions
+
+# y_numeric = np.argmax(y_test, axis = 1)     
+# y_hat_numeric = Max_Values
+# labels = ["L", "R", "U", "D", "B", "F"] 
+# cm = confusion_matrix(y_numeric, y_hat_numeric)
+# ax = plt.subplot()
+# sns.heatmap(cm, annot = True, fmt = 'g', ax = ax, cmap = 'flare')  
+# ax.set_xlabel("Predicted labels")
+# ax.set_ylabel("True labels")
+# ax.set_title("Confusion Matrix")
+# ax.xaxis.set_ticklabels(labels)
+# ax.yaxis.set_ticklabels(labels)
+# plt.show()
+#######################################################
+# Create sequential 3D CNN. 
 # Need to reshape the x_train and x_test to be used for a CNN. 
 # I will reshape as (6, 3, 3) instead of the (54). I picked this since there are 6 sides to a rubiks
 # cube and each side is 3 by 3
-x_train_reshape = x_train.reshape(3542, 6, 3, 3)
-x_test_reshape = x_test.reshape(393, 6, 3, 3)
-x_valid_reshape = x_valid.reshape(393, 6, 3, 3)
+x_train_reshape = x_train.reshape(3542, 6, 3, 3, 1)
+x_test_reshape = x_test.reshape(393, 6, 3, 3, 1)
+x_valid_reshape = x_valid.reshape(393, 6, 3, 3, 1)
 
 # BUILD MODEL
-CNN = keras.Sequential([
-    tf.keras.layers.Conv2D(input_shape = (6, 3, 3), kernel_size = (2, 2), filters = 128, activation = 'relu', strides = (1, 1), padding = "same"), 
+CNN_3D = keras.Sequential([
+    tf.keras.layers.Conv3D(input_shape = (6, 3, 3, 1), kernel_size = (3, 1, 1), filters = 128, activation = 'relu', strides = (1, 1, 1), padding = "same"), 
     tf.keras.layers.Dropout(0.5),
-    tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
-    tf.keras.layers.Conv2D(kernel_size = (2, 2), filters = 64, activation = 'relu', strides = (1, 1), padding = "same"),
+    tf.keras.layers.Conv3D(kernel_size = (3, 1, 1), filters = 64, activation = 'relu', strides = (1, 1, 1), padding = "same"),
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Conv3D(kernel_size = (3, 1, 1), filters = 32, activation = 'relu', strides = (1, 1, 1), padding = "same"),
     tf.keras.layers.Dropout(0.5),
     tf.keras.layers.Flatten(),
     tf.keras.layers.Dense(6, activation = "softmax")])
 
-CNN.summary()
+CNN_3D.summary()
 
 # COMPILE MODEL
-CNN.compile(loss="categorical_crossentropy",
+CNN_3D.compile(loss="categorical_crossentropy",
             metrics=["accuracy"],
-            optimizer='adam')
+            optimizer=keras.optimizers.Adam(learning_rate=0.001))
 
 
 # FIT THE MODEL TO TRAINING DATA
-Fit = CNN.fit(x_train_reshape, y_train, epochs = 100, validation_data = (x_valid_reshape, y_valid))
+Fit = CNN_3D.fit(x_train_reshape, y_train, epochs = 100, validation_data = (x_valid_reshape, y_valid))
 
 # PLOT RESULTS
 # Accuracy
@@ -198,10 +269,10 @@ plt.legend(loc='lower right')
 plt.show()
 
 # TEST
-Test_Loss, Test_Accuracy = CNN.evaluate(x_test_reshape, y_test)
+Test_Loss, Test_Accuracy = CNN_3D.evaluate(x_test_reshape, y_test)
 
 # PREDICT & CONFUSION MATRIX
-predictions = CNN.predict([x_test_reshape])
+predictions = CNN_3D.predict([x_test_reshape])
 Max_Values = np.squeeze(np.array(predictions.argmax(axis=1))) # all our label predictions
 
 y_numeric = np.argmax(y_test, axis = 1)     
@@ -216,81 +287,3 @@ ax.set_title("Confusion Matrix")
 ax.xaxis.set_ticklabels(labels)
 ax.yaxis.set_ticklabels(labels)
 plt.show()
-#######################################################
-# Create sequential CNN. 
-# Need to reshape the x_train and x_test to be used for a CNN. 
-# I will reshape as (6, 3, 3) instead of the (54). I picked this since there are 6 sides to a rubiks
-# cube and each side is 3 by 3
-# x_train_reshape = x_train.reshape(2039, 6, 3, 3)
-# red = x_train_reshape[:][:,0]
-# yellow = x_train_reshape[:][:,1]
-# green = x_train_reshape[:][:,2]
-# white = x_train_reshape[:][:,3]
-# orange = x_train_reshape[:][:,4]
-# blue = x_train_reshape[:][:,5]
-# space = -1*np.ones((2039, 3, 3)) 
-
-# x_train_reshape2 = np.array([[space, yellow, space], [blue, red, green], [space, white, space], [space, orange, space]])
-# print(red)
-# print(yellow)
-# x_test_reshape = x_test.reshape(1022, 6, 3, 3)
-
-# # BUILD MODEL
-# CNN = keras.Sequential([
-#     tf.keras.layers.Conv2D(input_shape = (6, 3, 3), kernel_size = (2, 2), filters = 128, activation = 'relu', strides = (1, 1), padding = "same"), 
-#     tf.keras.layers.Dropout(0.5),
-#     tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
-#     tf.keras.layers.Conv2D(kernel_size = (2, 2), filters = 64, activation = 'relu', strides = (1, 1), padding = "same"),
-#     tf.keras.layers.Dropout(0.5),
-#     tf.keras.layers.Flatten(),
-#     tf.keras.layers.Dense(6, activation = "softmax")])
-
-# CNN.summary()
-
-# # COMPILE MODEL
-# CNN.compile(loss="categorical_crossentropy",
-#             metrics=["accuracy"],
-#             optimizer='adam')
-
-
-# # FIT THE MODEL TO TRAINING DATA
-# Fit = CNN.fit(x_train_reshape, y_train, epochs = 50, validation_data = (x_test_reshape, y_test))
-
-# # PLOT RESULTS
-# # Accuracy
-# plt.plot(Fit.history['accuracy'], label = 'training accuracy', color = 'magenta')
-# plt.plot(Fit.history['val_accuracy'], label = 'validation accuracy', color = 'purple')
-# plt.xlabel('Epoch')
-# plt.ylabel('Accuracy')
-# plt.title("Accuracy over Epochs")
-# plt.ylim([0.5, 1])
-# plt.legend(loc='lower right')
-# plt.show()
-# # Loss
-# plt.plot(Fit.history['loss'], label = 'training loss', color = 'magenta')
-# plt.plot(Fit.history['val_loss'], label = 'validation loss', color = 'purple')
-# plt.xlabel('Epoch')
-# plt.ylabel('Loss')
-# plt.title("Loss over Epochs")
-# plt.legend(loc='lower right')
-# plt.show()
-
-# # TEST
-# Test_Loss, Test_Accuracy = CNN.evaluate(x_test_reshape, y_test)
-
-# # PREDICT & CONFUSION MATRIX
-# predictions = CNN.predict([x_test])
-# Max_Values = np.squeeze(np.array(predictions.argmax(axis=1))) # all our label predictions
-
-# y_numeric = np.argmax(y_test, axis = 1)     
-# y_hat_numeric = Max_Values
-# labels = ["L", "R", "U", "D", "B", "F"] 
-# cm = confusion_matrix(y_numeric, y_hat_numeric)
-# ax = plt.subplot()
-# sns.heatmap(cm, annot = True, fmt = 'g', ax = ax, cmap = 'flare')  
-# ax.set_xlabel("Predicted labels")
-# ax.set_ylabel("True labels")
-# ax.set_title("Confusion Matrix")
-# ax.xaxis.set_ticklabels(labels)
-# ax.yaxis.set_ticklabels(labels)
-# plt.show()
